@@ -2,10 +2,17 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var datepicker = {};	// @textField
 	var button1 = {};	// @button
 // @endregion// @endlock
 
 // eventHandlers// @lock
+
+	datepicker.click = function datepicker_click (event)// @startlock
+	{// @endlock
+		
+	};// @lock
+
 
 	button1.click = function button1_click (event)// @startlock
 	{// @endlock
@@ -23,6 +30,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	};// @lock
 
 // @region eventManager// @startlock
+	WAF.addListener("datepicker", "click", datepicker.click, "WAF");
 	WAF.addListener("button1", "click", button1.click, "WAF");
 // @endregion
 };// @endlock
